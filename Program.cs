@@ -37,15 +37,23 @@ namespace UserRegProblem
             //else
             //    Console.WriteLine("Password Not Matched");
 
-            PasswordRule3 passwordRule3 = new PasswordRule3();
+            //PasswordRule3 passwordRule3 = new PasswordRule3();
+            //Console.WriteLine("Enter Password");
+            //string value = Console.ReadLine();
+            //bool match = passwordRule3.validatePasswordRule3(value);
+            //if (match)
+            //    Console.WriteLine("Password Matched");
+            //else
+            //    Console.WriteLine("Password Not Matched");
+
+           Rule4 passwordRule4 = new Rule4();
             Console.WriteLine("Enter Password");
             string value = Console.ReadLine();
-            bool match = passwordRule3.validatePasswordRule3(value);
+            bool match = passwordRule4.validatePasswordRule4(value);
             if (match)
                 Console.WriteLine("Password Matched");
             else
                 Console.WriteLine("Password Not Matched");
-
 
 
         }
