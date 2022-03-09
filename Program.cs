@@ -7,15 +7,15 @@ namespace UserRegProblem
         {
             Console.WriteLine("Welcome to my User Regestation Problem");
 
-            LastName name = new LastName();
-            Console.WriteLine("Enter your Last Name");
-            string LastName = Console.ReadLine();
-            bool match = name.validateLastName(LastName);
+            Email em = new Email();
+            Console.WriteLine("Enter your Email");
+            string Email = Console.ReadLine();
+            bool match = em.validateLastName(Email);
 
             if (match)
-                Console.WriteLine("Last Name Matched");
+                Console.WriteLine("Email Matched");
             else
-                Console.WriteLine("Last Name are not Matche");
+                Console.WriteLine("Email are not Matche");
 
 
 
