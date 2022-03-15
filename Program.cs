@@ -1,61 +1,35 @@
 ﻿using System;
-namespace UserRegProblem
+
+namespace UserRegistrationUsingRegex
 {
     class Program
     {
+        /// <summary>
+        /// Main Methode For User Input
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to my User Regestation Problem");
-
-            //MobileNo no = new MobileNo();
-            //Console.WriteLine("Enter your MobileNo");
-
-            //string MobileNo = Console.ReadLine();
-
-            //bool match = no.validateMobileNo(MobileNo);
-
-            //if (match)
-            //    Console.WriteLine("MobileNo Matched");
-            //else
-            //    Console.WriteLine("MobileNo are not Matche");
-
-            //PassWordRule1 passwordRule1 = new PassWordRule1();
-            //Console.WriteLine("Enter Password");
-            //string value = Console.ReadLine();
-            //bool match = passwordRule1.validatePasswordRule1(value);
-            //if (match)
-            //    Console.WriteLine("Password Matched");
-            //else
-            //    Console.WriteLine("Password Not Matched");
-
-            //PassWordRule2 passwordRule2 = new PassWordRule2();
-            //Console.WriteLine("Enter Password");
-            //string value = Console.ReadLine();
-            //bool match = passwordRule2.validatePasswordRule2(value);
-            //if (match)
-            //    Console.WriteLine("Password Matched");
-            //else
-            //    Console.WriteLine("Password Not Matched");
-
-            //PasswordRule3 passwordRule3 = new PasswordRule3();
-            //Console.WriteLine("Enter Password");
-            //string value = Console.ReadLine();
-            //bool match = passwordRule3.validatePasswordRule3(value);
-            //if (match)
-            //    Console.WriteLine("Password Matched");
-            //else
-            //    Console.WriteLine("Password Not Matched");
-
-           Rule4 passwordRule4 = new Rule4();
-            Console.WriteLine("Enter Password");
-            string value = Console.ReadLine();
-            bool match = passwordRule4.validatePasswordRule4(value);
-            if (match)
-                Console.WriteLine("Password Matched");
-            else
-                Console.WriteLine("Password Not Matched");
-
-
+            Console.WriteLine("welcome to the user registration problem");
+            Console.WriteLine("Enter the first name = ");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Enter the last name = ");
+            string lastName = Console.ReadLine();
+            Console.WriteLine("Enter the email = ");
+            string email = Console.ReadLine();
+            Console.WriteLine("Enter the mobile pattern = ");
+            string mobilePattern = Console.ReadLine();
+            Console.WriteLine("Enter the password = ");
+            string preDefinedPassword = Console.ReadLine();
+            UserRegistrationRegex userRegistrationRegex = new UserRegistrationRegex();
+            Console.WriteLine(userRegistrationRegex.validateFirstName(firstName));
+            Console.WriteLine(userRegistrationRegex.validateLastName(lastName));
+            Console.WriteLine(userRegistrationRegex.validateEmail(email));
+            Console.WriteLine(userRegistrationRegex.validateMobileFormat(mobilePattern));
+            Console.WriteLine(userRegistrationRegex.validatePreDefinedPassword(preDefinedPassword));
+            Console.WriteLine("Email sample validator");
+            EmailSamples emailSamples = new();
+            emailSamples.validateEmails();
         }
     }
 }
